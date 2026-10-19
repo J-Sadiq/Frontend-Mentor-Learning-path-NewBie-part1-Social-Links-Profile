@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Green: hsl(75, 94%, 57%);
+  --White: hsl(0, 0%, 100%);
+  --Grey-700: hsl(0, 0%, 20%);
+  --Grey-800: hsl(0, 0%, 12%);
+  --Grey-900: hsl(0, 0%, 8%);
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter-Bold.ttf");
+  font-weight: 700;
+  font-style: bold;
+}
+
+body {
+  background-color: var(--Grey-900);
+  font-family: "Inter", sans-serif;
+  color: var(--White);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-profile-card {
+  background-color: var(--Grey-800);
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 384px;
+
+  border-radius: 8px;
+  align-items: center;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.top-box img {
+  width: 64px;
+  border-radius: 50px;
+}
+
+.name {
+  text-align: center;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.address {
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--Green);
+  font-weight: 900;
+}
+
+.job {
+  font-size: 14px;
+  font-weight: 400;
+  color: grey;
+}
+
+.bottom-box {
+  width: 100%;
+}
+
+.social-links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+}
+
+.social-links li {
+  width: 90%;
+  background-color: var(--Grey-700);
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.link {
+  display: block;
+  width: 100%;
+  padding: 16px 0;
+  text-align: center;
+  text-decoration: none;
+  color: var(--White);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.link:active {
+  color: var(--Green);
+}
+
+.social-links li:hover {
+  background-color: var(--Grey-900);
+  transform: scaleY(1.1);
+}
+
+@media (max-width: 440px) {
+  .social-profile-card {
+    max-width: 320px;
+    gap: 10px;
+  }
+
+  .link {
+    padding: 12px 0;
+    font-size: 14px;
+  }
+  .name {
+    font-size: 20px;
+  }
+  .address {
+    margin-bottom: 16px;
+    font-size: 12px;
+  }
+  .top-box img {
+    width: 54px;
+  }
+}
